@@ -1,0 +1,47 @@
+.header {grid-area: header;}
+.training-routine { grid-area: training;}
+.smartGoals { grid-area: goals;}
+.settings { grid-area: settings;}
+.focusAreas { grid-area: focus;}
+.lessonCount { grid-area: lesson;}
+.leetifyStats {grid-area: leetify;}
+
+body {
+    margin: 0;
+    background-image: url(images/so-white.png);
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'training training training goals goals goals'
+    'settings settings settings focus focus focus'
+    'lesson lesson lesson leetify leetify leetify';
+    column-gap: 50px;
+    
+}
+.lessons {
+    display: flex;
+    flex-direction: row;
+}
+.lesson {
+    margin: 0 7rem 0 1rem;
+    text-align: center;
+}
+.box {
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
+    -moz-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
+    margin: 0 1rem 2rem 0rem;
+    padding: 1rem;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.test {
+    background-color: white;
+    background-image: none;
+}
