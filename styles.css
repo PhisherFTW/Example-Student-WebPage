@@ -7,9 +7,10 @@
 .leetifyStats {grid-area: leetify;}
 
 :root {
-    --background: black;
-    --box-background: #212529;
+    --background: #19171E;
+    --box-background: #25222c;
     --text-gray: #ced7e0;
+    --pink : #F84982;
 }
 p{
     color: var(--text-gray)
@@ -20,11 +21,9 @@ li {
 
 
 body {
-    margin: 0;
-    /* background-image: url(images/so-white.png); */
-    background-color: black;
+    margin: 0 0 0 1rem;
+    background-color: var(--background);
     color: white;
-
 }
 
 
@@ -36,8 +35,11 @@ main {
     'settings settings lesson lesson lesson lesson'
     'leetify leetify lesson lesson lesson lesson'
     'leetify leetify lesson lesson lesson lesson';
-    column-gap: 50px;
+    column-gap: 30px;
     
+}
+.name {
+    color: var(--pink);
 }
 .lessons {
     display: flex;
@@ -65,10 +67,13 @@ h1 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    min-height: 0;  /* NEW */
+    min-width: 0;   /* NEW; needed for Firefox */
+    max-height: 65rem;
 }
 .leetifyStats {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     /* align-items: center; */
     flex-direction: column;
     padding: 0 3rem 0 3rem;
@@ -88,11 +93,12 @@ h1 {
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 
 .acc-btn:after {
     content: "\27A4";
-    color: #fa8d0c;
+    color: var(--pink);
     float: right;
     transition: all 0.3s linear;
 }
@@ -100,6 +106,6 @@ h1 {
     transform: rotate(90deg);
 }
 .acc-btn:hover, .acc-btn.is-open {
-    color: #000;
+    color: var(--pink);
     font-weight: bold;
 }
