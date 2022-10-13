@@ -6,18 +6,36 @@
 .lessonCount { grid-area: lesson;}
 .leetifyStats {grid-area: leetify;}
 
+:root {
+    --background: black;
+    --box-background: #212529;
+    --text-gray: #ced7e0;
+}
+p{
+    color: var(--text-gray)
+}
+li {
+    color: var(--text-gray)
+}
+
+
 body {
     margin: 0;
-    background-image: url(images/so-white.png);
+    /* background-image: url(images/so-white.png); */
+    background-color: black;
+    color: white;
+
 }
+
 
 main {
     display: grid;
     grid-template-areas: 
     'header header header header header header'
     'training training training goals goals goals'
-    'settings settings settings focus focus focus'
-    'lesson lesson lesson leetify leetify leetify';
+    'settings settings lesson lesson lesson lesson'
+    'leetify leetify lesson lesson lesson lesson'
+    'leetify leetify lesson lesson lesson lesson';
     column-gap: 50px;
     
 }
@@ -36,12 +54,52 @@ main {
     -moz-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
     margin: 0 1rem 2rem 0rem;
     padding: 1rem;
+    background-color: var(--box-background);
 }
 h1 {
     text-align: center;
     text-decoration: underline;
 }
-.test {
-    background-color: white;
-    background-image: none;
+.settings {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.leetifyStats {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 0 3rem 0 3rem;
+}
+
+
+
+
+
+.acc-btn {
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.acc-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border-bottom: 1px solid #ccc;
+}
+
+.acc-btn:after {
+    content: "\27A4";
+    color: #fa8d0c;
+    float: right;
+    transition: all 0.3s linear;
+}
+.acc-btn.is-open:after {
+    transform: rotate(90deg);
+}
+.acc-btn:hover, .acc-btn.is-open {
+    color: #000;
+    font-weight: bold;
 }
