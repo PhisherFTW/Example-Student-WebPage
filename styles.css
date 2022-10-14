@@ -11,6 +11,18 @@
     --box-background: #25222c;
     --text-gray: #ced7e0;
     --pink : #F84982;
+    --red : #de425b;
+    --orange: #fb9d5a;
+    --green: #00b087;
+}
+.red {
+    color: var(--red);
+}
+.orange {
+    color: var(--orange);
+}
+.green {
+    color: var(--green);
 }
 p{
     color: var(--text-gray)
@@ -77,6 +89,10 @@ h1 {
     /* align-items: center; */
     flex-direction: column;
     padding: 0 3rem 0 3rem;
+}
+.cfg {
+    text-decoration: none;
+    color: var(--pink);
 }
 
 
