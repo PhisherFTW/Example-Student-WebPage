@@ -14,6 +14,8 @@
     --red : #de425b;
     --orange: #fb9d5a;
     --green: #00b087;
+    --font-family-sans-serif: 'Lato', sans-serif;
+    --font-family-monospace: SFMono-Regular
 }
 .red {
     color: var(--red);
@@ -48,7 +50,6 @@ main {
     'leetify leetify lesson lesson lesson lesson'
     'leetify leetify lesson lesson lesson lesson';
     column-gap: 30px;
-    
 }
 .name {
     color: var(--pink);
@@ -92,9 +93,19 @@ h1 {
 }
 .cfg {
     text-decoration: none;
-    color: var(--pink);
+    color: var(--text-gray);
+    background-color: var(--pink);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-family: var(--font-family-sans-serif);
+    font-weight: 700;
+    margin: 0 0.5rem 0 0.5rem;
 }
-
+.downloads {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 
 
