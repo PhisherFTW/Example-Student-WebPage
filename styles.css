@@ -136,3 +136,21 @@ h1 {
     color: var(--pink);
     font-weight: bold;
 }
+
+
+
+
+
+@media only screen and (max-width: 1300px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+        'header header header header header header'
+        'training training training training training training'
+        'goals goals goals goals goals goals'
+        'settings settings settings settings settings settings'
+        'lesson lesson lesson lesson lesson lesson'
+        'leetify leetify leetify leetify leetify leetify';
+        column-gap: 15px;
+    }
+}
