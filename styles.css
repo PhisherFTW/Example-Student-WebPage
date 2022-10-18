@@ -5,6 +5,7 @@
 .focusAreas { grid-area: focus;}
 .lessonCount { grid-area: lesson;}
 .leetifyStats {grid-area: leetify;}
+.Maps {grid-area: maps;}
 
 :root {
     --background: #19171E;
@@ -48,7 +49,8 @@ main {
     'training training training goals goals goals'
     'settings settings lesson lesson lesson lesson'
     'leetify leetify lesson lesson lesson lesson'
-    'leetify leetify lesson lesson lesson lesson';
+    'leetify leetify lesson lesson lesson lesson'
+    'maps maps maps maps maps maps';
     column-gap: 30px;
 }
 .name {
@@ -140,6 +142,26 @@ h1 {
 
 
 
+.collapsible {
+    cursor: pointer;
+}
+.collapsible:hover {
+    color: var(--pink);
+    transition: all 0.3s linear;
+}
+.collapsible.active {
+    color: var(--pink);
+}
+  
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+
 
 @media only screen and (max-width: 1300px) {
     main {
@@ -150,7 +172,8 @@ h1 {
         'goals goals goals goals goals goals'
         'settings settings settings settings settings settings'
         'lesson lesson lesson lesson lesson lesson'
-        'leetify leetify leetify leetify leetify leetify';
+        'leetify leetify leetify leetify leetify leetify'
+        'maps maps maps maps maps maps';
         column-gap: 15px;
     }
 }
