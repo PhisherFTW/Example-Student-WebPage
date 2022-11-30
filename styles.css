@@ -1,35 +1,67 @@
-.header {grid-area: header;}
-.training-routine { grid-area: training;}
-.smartGoals { grid-area: goals;}
-.settings { grid-area: settings;}
-.focusAreas { grid-area: focus;}
-.lessonCount { grid-area: lesson;}
-.leetifyStats {grid-area: leetify;}
-.Maps {grid-area: maps;}
+.header {
+    grid-area: header;
+}
+
+.training-routine {
+    grid-area: training;
+}
+
+.smartGoals {
+    grid-area: goals;
+}
+
+.settings {
+    grid-area: settings;
+}
+
+.focusAreas {
+    grid-area: focus;
+}
+
+.lessonCount {
+    grid-area: lesson;
+}
+
+.leetifyStats {
+    grid-area: leetify;
+}
+
+.Maps {
+    grid-area: maps;
+}
+
+.Personal {
+    grid-area: personal;
+}
 
 :root {
     --background: #19171E;
     --box-background: #25222c;
     --text-gray: #ced7e0;
-    --pink : #F84982;
-    --red : #de425b;
+    --pink: #F84982;
+    --red: #de425b;
     --orange: #fb9d5a;
     --green: #00b087;
     --font-family-sans-serif: 'Lato', sans-serif;
     --font-family-monospace: SFMono-Regular
 }
+
 .red {
     color: var(--red);
 }
+
 .orange {
     color: var(--orange);
 }
+
 .green {
     color: var(--green);
 }
-p{
+
+p {
     color: var(--text-gray)
 }
+
 li {
     color: var(--text-gray)
 }
@@ -44,48 +76,57 @@ body {
 
 main {
     display: grid;
-    grid-template-areas: 
-    'header header header header header header'
-    'training training training goals goals goals'
-    'settings settings lesson lesson lesson lesson'
-    'leetify leetify lesson lesson lesson lesson'
-    'leetify leetify lesson lesson lesson lesson'
-    'maps maps maps maps maps maps';
+    grid-template-areas:
+        'header header header header header header'
+        'training training training goals goals goals'
+        'settings settings lesson lesson lesson lesson'
+        'leetify leetify lesson lesson lesson lesson'
+        'leetify leetify lesson lesson lesson lesson'
+        'personal personal maps maps maps maps';
     column-gap: 30px;
 }
+
 .name {
     color: var(--pink);
 }
+
 .lessons {
     display: flex;
     flex-direction: row;
 }
+
 .lesson {
     margin: 0 7rem 0 1rem;
     text-align: center;
 }
+
 .box {
     border-radius: 25px;
-    box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
-    -webkit-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
-    -moz-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.57);
+    box-shadow: 10px 10px 30px -7px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 10px 10px 30px -7px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 10px 10px 30px -7px rgba(0, 0, 0, 0.57);
     margin: 0 1rem 2rem 0rem;
     padding: 1rem;
     background-color: var(--box-background);
 }
+
 h1 {
     text-align: center;
     text-decoration: underline;
 }
+
 .settings {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-height: 0;  /* NEW */
-    min-width: 0;   /* NEW; needed for Firefox */
+    min-height: 0;
+    /* NEW */
+    min-width: 0;
+    /* NEW; needed for Firefox */
     max-height: 65rem;
 }
+
 .leetifyStats {
     display: flex;
     /* justify-content: center; */
@@ -93,6 +134,7 @@ h1 {
     flex-direction: column;
     padding: 0 3rem 0 3rem;
 }
+
 .cfg {
     text-decoration: none;
     color: var(--text-gray);
@@ -103,6 +145,7 @@ h1 {
     font-weight: 700;
     margin: 0 0.5rem 0 0.5rem;
 }
+
 .downloads {
     display: flex;
     flex-direction: row;
@@ -131,10 +174,13 @@ h1 {
     float: right;
     transition: all 0.3s linear;
 }
+
 .acc-btn.is-open:after {
     transform: rotate(90deg);
 }
-.acc-btn:hover, .acc-btn.is-open {
+
+.acc-btn:hover,
+.acc-btn.is-open {
     color: var(--pink);
     font-weight: bold;
 }
@@ -145,35 +191,90 @@ h1 {
 .collapsible {
     cursor: pointer;
 }
+
 .collapsible:hover {
     color: var(--pink);
     transition: all 0.3s linear;
 }
+
 .collapsible.active {
     color: var(--pink);
 }
-  
+
 .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#newtask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    background-color: var(--box-background);
+    color: white;
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
 
+#newtask input {
+    background-color: var(--box-background);
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    padding-left: 2rem;
+}
 
+#newtask input:focus {
+    outline-width: 0;
+}
+#newtask button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-gray);
+    font-family: var(--font-family-sans-serif);
+    font-weight: 700;
+    background-color: var(--pink);
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    border-radius: 1.5rem;
+    width: 9rem;
+    height: 3rem;
+}
+.bck {
+    background-color: var(--box-background);
+    width: 1rem;
 
+}
+.delete {
+    padding: 0;
+    border: none;
+    background-color: var(--box-background);
+    margin: 0.25rem;
+}
 
 
 @media only screen and (max-width: 1300px) {
     main {
         display: grid;
-        grid-template-areas: 
-        'header header header header header header'
-        'training training training training training training'
-        'goals goals goals goals goals goals'
-        'settings settings settings settings settings settings'
-        'lesson lesson lesson lesson lesson lesson'
-        'leetify leetify leetify leetify leetify leetify'
-        'maps maps maps maps maps maps';
+        grid-template-areas:
+            'header header header header header header'
+            'training training training training training training'
+            'goals goals goals goals goals goals'
+            'settings settings settings settings settings settings'
+            'lesson lesson lesson lesson lesson lesson'
+            'leetify leetify leetify leetify leetify leetify'
+            'personal personal personal personal personal personal'
+            'maps maps maps maps maps maps';
         column-gap: 15px;
     }
 }
